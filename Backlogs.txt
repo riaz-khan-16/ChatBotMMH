@@ -1,0 +1,4 @@
+[2] Make a frontend for the chatbot
+[1] Make a rule based chatbot [Done]
+
+
