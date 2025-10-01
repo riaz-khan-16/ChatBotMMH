@@ -1,4 +1,8 @@
-[2] Make a frontend for the chatbot
+
+
+[3] Make a Django App 
+[2] Make a frontend for the chatbot [Done]
 [1] Make a rule based chatbot [Done]
+
 
 
