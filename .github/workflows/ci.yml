@@ -26,3 +26,11 @@ jobs:
       - name: Run Django tests
         run: |
           python manage.py test
+
+          
+      - name: Trigger Render Deploy
+        if: success()  # Only run if tests pass
+        run: |
+          curl -X POST "$RENDER_DEPLOY_HOOK"
+        env:
+          RENDER_DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
