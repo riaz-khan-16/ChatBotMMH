@@ -1,7 +1,8 @@
 
+[8]
 [7] Make openai based response
-[6] Make rule based response
-[5] Add JS and Python 
+[6] Make rule based response [done]
+[5] Connect frontend and backend [Done]
 [4] Deploy in Render [Done]
 [3] Make a Django App [Done]
 [2] Make a frontend for the chatbot [Done]
