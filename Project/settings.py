@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-&2t@^5pf!@3tdv5v)szg(wi5jhx7)v-#_j4z*ba94u0f6dx29o
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['chatbotmmh.onrender.com']
+ALLOWED_HOSTS = ['*']
 
 
 
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'Chatbot',
 ]
 
 MIDDLEWARE = [

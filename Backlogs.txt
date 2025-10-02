@@ -1,6 +1,6 @@
 
-
-[3] Make a Django App 
+[4] Deploy in Render 
+[3] Make a Django App [Done]
 [2] Make a frontend for the chatbot [Done]
 [1] Make a rule based chatbot [Done]
 
