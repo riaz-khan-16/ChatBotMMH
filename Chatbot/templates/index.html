@@ -76,12 +76,33 @@
     console.log("Response is prepared: ", response)
 
 
-    appendMessage(response, "bot"); // show the response in html page
+    // 5. get data from backend 
+    const response1 = await fetch("/get-response/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "X-CSRFToken": getCSRFToken() // required by Django
+      },
+      body: "message=" + encodeURIComponent(userMessage)
+    });
+
+    const data = await response1.json();
+    console.log("backend response: ", data.reply);
+
+
+
+
+    
+   // 6. show and append this message as a  bot
+    appendMessage(data.reply, "bot"); // show the response in html page
     console.log("Appended bot message to chat");
 
 
     inputField.value = ""; // clear the input value
     console.log("Cleared input field");
+
+
+    
 
 
 
@@ -104,7 +125,28 @@
   }
 
 
-  // function: 
+
+
+
+  // function:  for csrf token
+
+  function getCSRFToken() {
+  let cookieValue = null;
+  const cookies = document.cookie.split(";");
+  for (let cookie of cookies) {
+    cookie = cookie.trim();
+    if (cookie.startsWith("csrftoken=")) {
+      cookieValue = cookie.substring("csrftoken=".length, cookie.length);
+      break;
+    }
+  }
+  return cookieValue;
+}
+
+
+
+
+
   </script>
 </body>
 </html>
